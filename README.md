@@ -32,7 +32,7 @@ Teste Zitrus.
     ```
    
 3. Execute a aplicação:
-
+   http://localhost:8080/healthcare/
 
 ## Estrutura do Banco de Dados
 A estrutura do banco de dados é gerenciada pelo Liquibase. O arquivo de changelog está localizado em `src/main/resources/liquibase/master.xml`.
