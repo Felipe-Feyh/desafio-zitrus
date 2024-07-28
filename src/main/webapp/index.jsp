@@ -8,6 +8,8 @@
 <link rel="stylesheet" href="css/styles.css">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="js/confirmador.js"></script>
+<!-- Adicione o link para o favicon -->
+<link rel="icon" href="images/zitrus-102620-150x150.png" type="image/png">
 </head>
 <body>
     <h1>Autorizador de procedimentos</h1>
