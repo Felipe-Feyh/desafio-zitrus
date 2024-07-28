@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                            http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <!-- Criação da Tabela -->
+    <changeSet id="create-procedimento-table" author="dev">
+        <createTable tableName="procedimento">
+            <column name="id" type="identity">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="cdprocedimento" type="integer">
+                <constraints nullable="false"/>
+            </column>
+            <column name="nridade" type="integer"/>
+            <column name="sexo" type="char(1)"/>
+            <column name="permitido" type="boolean"/>
+        </createTable>
+    </changeSet>
+
+    <!-- Inserção de Dados Iniciais -->
+    <changeSet id="insert-initial-data" author="felipe.feyh">
+        <insert tableName="procedimento">
+            <column name="cdprocedimento" value="1234"/>
+            <column name="nridade" value="10"/>
+            <column name="sexo" value="M"/>
+            <column name="permitido" valueBoolean="false"/>
+        </insert>
+        <insert tableName="procedimento">
+            <column name="cdprocedimento" value="4567"/>
+            <column name="nridade" value="20"/>
+            <column name="sexo" value="M"/>
+            <column name="permitido" valueBoolean="true"/>
+        </insert>
+        <insert tableName="procedimento">
+            <column name="cdprocedimento" value="6789"/>
+            <column name="nridade" value="10"/>
+            <column name="sexo" value="F"/>
+            <column name="permitido" valueBoolean="false"/>
+        </insert>
+        <insert tableName="procedimento">
+            <column name="cdprocedimento" value="6789"/>
+            <column name="nridade" value="10"/>
+            <column name="sexo" value="M"/>
+            <column name="permitido" valueBoolean="true"/>
+        </insert>
+        <insert tableName="procedimento">
+            <column name="cdprocedimento" value="1234"/>
+            <column name="nridade" value="20"/>
+            <column name="sexo" value="M"/>
+            <column name="permitido" valueBoolean="true"/>
+        </insert>
+        <insert tableName="procedimento">
+            <column name="cdprocedimento" value="4567"/>
+            <column name="nridade" value="30"/>
+            <column name="sexo" value="F"/>
+            <column name="permitido" valueBoolean="true"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>
